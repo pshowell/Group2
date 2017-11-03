@@ -3,20 +3,14 @@
     
 /* Set gray background color and 100% height */
 .sidenav {
-  background-color: #f1f1f1;
+  background-color: #ffc266;
   height: 100%;
 
 }
 .btn-lg {
   font-size: 24px;
+  background-color: #555;
 }
-
-.jumbotron{
-  background-color: white;
-  height: 300px;
-
-}
-
 /*Background image*/
 body{
   background-image: url(https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
@@ -50,16 +44,19 @@ footer {
 header{ 
 font-family: 'Caveat Brush', cursive;
 text-align: center;
+
 }
 h1 {
   font-family: 'Caveat Brush', cursive;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
+  color: white;
 }
 h2 {
   font-family: 'Caveat Brush', cursive;
   font-size: 48px;
   text-align: center;
+  color: white;
 }
 h3 {
   text-align: left;
@@ -74,6 +71,7 @@ h3 {
    	margin-left:auto;
    	margin-right:auto;
    	display:block;
+
 }
 .page-header {
   font-family: 'Caveat Brush', cursive;
@@ -82,7 +80,6 @@ h3 {
 /*Contact Form*/
 .main-section {
   font-family: 'Special Elite', cursive;
-
   margin:auto;
   display:block;
   width: 100%;
