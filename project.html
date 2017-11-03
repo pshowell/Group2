@@ -53,47 +53,118 @@
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-            // Color for Food (foodtruck) Icons//           
 
-            var greenIcon = new L.Icon({
-            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+
+            // Color for customized Icons//           
+
+             var foodIcon = new L.Icon({
+            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-FJ8Jvkn/0/7586f7bc/Ti/i-FJ8Jvkn-Ti.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
+            iconSize: [40, 40],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
             shadowSize: [41, 41]
             });
 
 
-            var redIcon = new L.Icon({
-            iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            var barIcon = new L.Icon({
+            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-nmmrLcS/0/017be290/Ti/i-nmmrLcS-Ti.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
+            iconSize: [40, 40],
             iconAnchor: [12, 41],
             popupAnchor: [1, -34],
             shadowSize: [41, 41]
             });
 
-            // Markers for food truck location//
+            var danceIcon = new L.Icon({
+            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-CpD5H2W/0/7d3534e3/Ti/i-CpD5H2W-Ti.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [40, 40],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+            });
+
+            // Markers for Food, Bar, Dance  locations //
+            var Lobsterpound = L.marker([38.881359, -77.110916], {icon: foodIcon}).addTo(map);
+            
+                Lobsterpound.bindPopup("<b>Lobster Pound</b><br> Lobster Rolls for $16.95!").openPopup();
+
+            
+
+            var Arepa = L.marker([38.881670, -77.111313], {icon: foodIcon}).addTo(map);
+                Arepa.bindPopup("<b>Arepa</b><br> Arepas from $6.50- $8.50.").openPopup();
+
+
+
+            var Badabing = L.marker([38.880925, -77.111301], {icon: foodIcon}).addTo(map);
+              
+                Badabing.bindPopup("<b>Bada Bing</b><br> Hot Italian sandwiches with high quality ingredients.").openPopup();
+
+
+
+            var Favapot = L.marker([38.881911, -77.111463], {icon: foodIcon}).addTo(map);
+            
+                Favapot.bindPopup("<b>Fava Pot</b><br> Serving affordable Egyptian and Mediterranean food.").openPopup();
+
+
+
+            var OverRice = L.marker([38.880519, -77.111297], {icon: foodIcon}).addTo(map);
+           
+               OverRice.bindPopup("<b>Over Rice </b><br> Serving delicious rice and salad bowls.").openPopup();
+
+            
+
+            // var marker1 = L.marker([38.881537, -77.115975], {icon: greenIcon}).addTo(map);
+           
+
+            // marker1.bindPopup("<b>Our Bootcamp!</b><br>Is driving everyone cray cray!.<br>Is driving everyone cray cray!.").openPopup();
+
+
+            var bangkok = L.marker([38.879668, -77.112468], {icon: barIcon}).addTo(map);
+                bangkok.bindPopup("<b>Bangkok Bistro</b><br> Heaven and Hell themed bar.").openPopup();
+
+
+            
+            var aTown = L.marker([38.882110, -77.109660], {icon: barIcon}).addTo(map);
+            
+                aTown.bindPopup("<b>A-Town Bar</b><br> Lively grill & lounge serving up global fare & cocktails, plus a sushi menu & a buffet brunch!").openPopup();
+
+           
+
+            var cheese = L.marker([38.880439, -77.115131], {icon: barIcon}).addTo(map);
+            
+                cheese.bindPopup("<b>Cheesetique</b><br>Cheesetique is a boutique of cheese.").openPopup();
+
+
+
+            var ranchero = L.marker([38.879298, -77.117581], {icon: barIcon}).addTo(map);
+
+                ranchero.bindPopup("<b>El Ranchero</b><br>happy-hour deals in a homey, south-of-the-border-esque setting.").openPopup();
+
+           
+
+            var firstDown = L.marker([38.882486, -77.111245], {icon: barIcon}).addTo(map);
+
+            firstDown.bindPopup("<b>First Down Sports Bar</b><br>Televised sports, beers & wings, plus chances to score points playing games like foosball..").openPopup();
+
+
+
+            var Ballroom = L.marker([38.885436, -77.096347], {icon: danceIcon}).addTo(map);
+           
+               Ballroom.bindPopup("<b>Clarendon Ballroom </b><br> Art Deco Style Dance Space with Rooftop Deck.").openPopup();
+
+            var Bracket = L.marker([38.887079, -77.095140], {icon: danceIcon}).addTo(map);
+           
+               Bracket.bindPopup("<b>Bracket Room </b><br> Classy Space with Weekend Djs.").openPopup();
+
+
+
+            var Mister = L.marker([38.885637, -77.093963], {icon: danceIcon}).addTo(map);
+           
+               Mister.bindPopup("<b>Mister Days </b><br>  Weekend Djs with American Fare.").openPopup();
                 
-            var Lobsterpound = L.marker([38.881359, -77.110916], {icon: greenIcon}).addTo(map);
-            var Arepa = L.marker([38.881670, -77.111313], {icon: greenIcon}).addTo(map);
-            var Bedabing = L.marker([38.880925, -77.111301], {icon: greenIcon}).addTo(map);
-            var Favapot = L.marker([38.881911, -77.111463], {icon: greenIcon}).addTo(map);
-            var Loop = L.marker([38.880519, -77.111297], {icon: greenIcon}).addTo(map);
-
-            var marker1 = L.marker([38.881537, -77.115975], {icon: greenIcon}).addTo(map);
-            marker1.bindPopup("<b>Our Bootcamp!</b><br>Is driving everyone cray cray!.<br>Is driving everyone cray cray!.").openPopup();
-            var bangkok = L.marker([38.879668, -77.112468], {icon: redIcon}).addTo(map);
-            bangkok.bindPopup("<b>Bangkok Bistro</b><br>Is driving everyone cray cray!.").openPopup();
-            var aTown = L.marker([38.882110, -77.109660], {icon: redIcon}).addTo(map);
-            aTown.bindPopup("<b>A-Town Bar</b><br>Is driving everyone cray cray!.").openPopup();
-            var cheese = L.marker([38.880439, -77.115131], {icon: redIcon}).addTo(map);
-            cheese.bindPopup("<b>Cheesetique</b><br>Is driving everyone cray cray!.").openPopup();
-            var ranchero = L.marker([38.879298, -77.117581], {icon: redIcon}).addTo(map);
-            ranchero.bindPopup("<b>El Ranchero</b><br>Is driving everyone cray cray!.").openPopup();
-            var firstDown = L.marker([38.882486, -77.111245], {icon: redIcon}).addTo(map);
-            firstDown.bindPopup("<b>First Down Sports Bar</b><br>Is driving everyone cray cray!.").openPopup();
+            
                     
           </script>
        </div>
