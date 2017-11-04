@@ -34,153 +34,148 @@
       <div align= "center" class="col-sm-3 sidenav">
       <h2>Categories</h2>
       <br>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-success">Food</a>
-          <a href="#" class="list-group-item list-group-item-info">Happy Hour</a>
-          <a href="#" class="list-group-item list-group-item-warning">Dance</a>
-          <br>
-          <br>
-          <a href="contact.html" type="button" class="btn btn-primary btn-lg">I'm A Local!</a>
-        </div>
+      <div class="list-group">
+               <!-- <a href= id ="map" class="list-group-item list-group-item-success">Food</a>
+          <a href=id ="happyHour" class="list-group-item list-group-item-info">Happy Hour</a>
+          <a href=id ="dance" class="list-group-item list-group-item-warning">Dance</a> -->
+               <button id="food" class="list-group-item list-group-item-success">Food</button>
+               <button id="happyHour" class="list-group-item list-group-item-info">Happy Hour</button>
+               <button id="dance" class="list-group-item list-group-item-warning">Dance!</button>
+               <br>
+               <br>
+               <a href="contact.html" type="button" class="btn btn-primary btn-lg">I'm A Local!</a>
+            </div>
+         </div>
+         <div class="col-sm-9">
+            <div id="map">
+               <script>
+                  // Creating the map
+                  var map = L.map('map', {
+                     center: [38.881520, -77.115997],
+                     zoom: 15
+                  });
+                  // Adding a layer to the map
+                  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  }).addTo(map);
+
+                  // Color for customized Icons//
+                  var foodIcon = new L.Icon({
+                     iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-FJ8Jvkn/0/7586f7bc/Ti/i-FJ8Jvkn-Ti.png',
+                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                     iconSize: [40, 40],
+                     iconAnchor: [12, 41],
+                     popupAnchor: [1, -34],
+                     shadowSize: [41, 41]
+                  });
+
+                  var barIcon = new L.Icon({
+                     iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-nmmrLcS/0/017be290/Ti/i-nmmrLcS-Ti.png',
+                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                     iconSize: [40, 40],
+                     iconAnchor: [12, 41],
+                     popupAnchor: [1, -34],
+                     shadowSize: [41, 41]
+                  });
+
+                  var danceIcon = new L.Icon({
+                     iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-CpD5H2W/0/7d3534e3/Ti/i-CpD5H2W-Ti.png',
+                     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                     iconSize: [40, 40],
+                     iconAnchor: [12, 41],
+                     popupAnchor: [1, -34],
+                     shadowSize: [41, 41]
+                  });
+
+                  // function clearMap() {
+                  //    map.redraw();
+                  // };
+                  // Call food markers on button click
+                  $("#food").on("click", function() {
+                     // clearMap();
+                     var Lobsterpound = L.marker([38.881359, -77.110916], {
+                        icon: foodIcon
+                     }).addTo(map);
+                     Lobsterpound.bindPopup("<b>Lobster Pound</b><br> Lobster Rolls for $16.95!").openPopup();
+
+                     var Arepa = L.marker([38.881670, -77.111313], {
+                        icon: foodIcon
+                     }).addTo(map);
+                     Arepa.bindPopup("<b>Arepa</b><br> Arepas from $6.50- $8.50.").openPopup();
+
+                     var Badabing = L.marker([38.880925, -77.111301], {
+                        icon: foodIcon
+                     }).addTo(map);
+                     Badabing.bindPopup("<b>Bada Bing</b><br> Hot Italian sandwiches with high quality ingredients.").openPopup();
+
+                     var Favapot = L.marker([38.881911, -77.111463], {
+                        icon: foodIcon
+                     }).addTo(map);
+                     Favapot.bindPopup("<b>Fava Pot</b><br> Serving affordable Egyptian and Mediterranean food.").openPopup();
+
+                     var OverRice = L.marker([38.880519, -77.111297], {
+                        icon: foodIcon
+                     }).addTo(map);
+                     OverRice.bindPopup("<b>Over Rice </b><br> Serving delicious rice and salad bowls.").openPopup();
+                  });
+                  // Call new pins on happy hour click
+                  $("#happyHour").on("click", function() {
+
+                     var bangkok = L.marker([38.879668, -77.112468], {
+                        icon: barIcon
+                     }).addTo(map);
+                     bangkok.bindPopup("<b>Bangkok Bistro</b><br> Heaven and Hell themed bar.").openPopup();
+
+                     var aTown = L.marker([38.882110, -77.109660], {
+                        icon: barIcon
+                     }).addTo(map);
+                     aTown.bindPopup("<b>A-Town Bar</b><br> Lively grill & lounge serving up global fare & cocktails, plus a sushi menu & a buffet brunch!").openPopup();
+
+                     var cheese = L.marker([38.880439, -77.115131], {
+                        icon: barIcon
+                     }).addTo(map);
+                     cheese.bindPopup("<b>Cheesetique</b><br>Cheesetique is a boutique of cheese.").openPopup();
+
+                     var ranchero = L.marker([38.879298, -77.117581], {
+                        icon: barIcon
+                     }).addTo(map);
+                     ranchero.bindPopup("<b>El Ranchero</b><br>happy-hour deals in a homey, south-of-the-border-esque setting.").openPopup();
+
+                     var firstDown = L.marker([38.882486, -77.111245], {
+                        icon: barIcon
+                     }).addTo(map);
+                     firstDown.bindPopup("<b>First Down Sports Bar</b><br>Televised sports, beers & wings, plus chances to score points playing games like foosball..").openPopup();
+                  });
+
+                  // Call dance pins on click
+                  $("#dance").on("click", function() {
+
+                     var Ballroom = L.marker([38.885436, -77.096347], {
+                        icon: danceIcon
+                     }).addTo(map);
+                     Ballroom.bindPopup("<b>Clarendon Ballroom </b><br> Art Deco Style Dance Space with Rooftop Deck.").openPopup();
+
+                     var Bracket = L.marker([38.887079, -77.095140], {
+                        icon: danceIcon
+                     }).addTo(map);
+                     Bracket.bindPopup("<b>Bracket Room </b><br> Classy Space with Weekend Djs.").openPopup();
+
+                     var Mister = L.marker([38.885637, -77.093963], {
+                        icon: danceIcon
+                     }).addTo(map);
+                     Mister.bindPopup("<b>Mister Days </b><br>  Weekend Djs with American Fare.").openPopup();
+                  });
+               </script>
+            </div>
+         </div>
       </div>
-    <div class="col-sm-9">
-        <div id="map">
-          <script>
-            
-            var map = L.map('map',{
-            center: [38.881520, -77.115997],
-            zoom: 15
-            });
+   </div>
 
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-
-
-            // Color for customized Icons//           
-
-             var foodIcon = new L.Icon({
-            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-FJ8Jvkn/0/7586f7bc/Ti/i-FJ8Jvkn-Ti.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [40, 40],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-            });
-
-
-            var barIcon = new L.Icon({
-            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-nmmrLcS/0/017be290/Ti/i-nmmrLcS-Ti.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [40, 40],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-            });
-
-            var danceIcon = new L.Icon({
-            iconUrl: 'https://photos.smugmug.com/Project-icons/n-nK2Z77/i-CpD5H2W/0/7d3534e3/Ti/i-CpD5H2W-Ti.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [40, 40],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-            });
-
-            // Markers for Food, Bar, Dance  locations //
-            var Lobsterpound = L.marker([38.881359, -77.110916], {icon: foodIcon}).addTo(map);
-            
-                Lobsterpound.bindPopup("<b>Lobster Pound</b><br> Lobster Rolls for $16.95!").openPopup();
-
-            
-
-            var Arepa = L.marker([38.881670, -77.111313], {icon: foodIcon}).addTo(map);
-                Arepa.bindPopup("<b>Arepa</b><br> Arepas from $6.50- $8.50.").openPopup();
-
-
-
-            var Badabing = L.marker([38.880925, -77.111301], {icon: foodIcon}).addTo(map);
-              
-                Badabing.bindPopup("<b>Bada Bing</b><br> Hot Italian sandwiches with high quality ingredients.").openPopup();
-
-
-
-            var Favapot = L.marker([38.881911, -77.111463], {icon: foodIcon}).addTo(map);
-            
-                Favapot.bindPopup("<b>Fava Pot</b><br> Serving affordable Egyptian and Mediterranean food.").openPopup();
-
-
-
-            var OverRice = L.marker([38.880519, -77.111297], {icon: foodIcon}).addTo(map);
-           
-               OverRice.bindPopup("<b>Over Rice </b><br> Serving delicious rice and salad bowls.").openPopup();
-
-            
-
-            // var marker1 = L.marker([38.881537, -77.115975], {icon: greenIcon}).addTo(map);
-           
-
-            // marker1.bindPopup("<b>Our Bootcamp!</b><br>Is driving everyone cray cray!.<br>Is driving everyone cray cray!.").openPopup();
-
-
-            var bangkok = L.marker([38.879668, -77.112468], {icon: barIcon}).addTo(map);
-                bangkok.bindPopup("<b>Bangkok Bistro</b><br> Heaven and Hell themed bar.").openPopup();
-
-
-            
-            var aTown = L.marker([38.882110, -77.109660], {icon: barIcon}).addTo(map);
-            
-                aTown.bindPopup("<b>A-Town Bar</b><br> Lively grill & lounge serving up global fare & cocktails, plus a sushi menu & a buffet brunch!").openPopup();
-
-           
-
-            var cheese = L.marker([38.880439, -77.115131], {icon: barIcon}).addTo(map);
-            
-                cheese.bindPopup("<b>Cheesetique</b><br>Cheesetique is a boutique of cheese.").openPopup();
-
-
-
-            var ranchero = L.marker([38.879298, -77.117581], {icon: barIcon}).addTo(map);
-
-                ranchero.bindPopup("<b>El Ranchero</b><br>happy-hour deals in a homey, south-of-the-border-esque setting.").openPopup();
-
-           
-
-            var firstDown = L.marker([38.882486, -77.111245], {icon: barIcon}).addTo(map);
-
-            firstDown.bindPopup("<b>First Down Sports Bar</b><br>Televised sports, beers & wings, plus chances to score points playing games like foosball..").openPopup();
-
-
-
-            var Ballroom = L.marker([38.885436, -77.096347], {icon: danceIcon}).addTo(map);
-           
-               Ballroom.bindPopup("<b>Clarendon Ballroom </b><br> Art Deco Style Dance Space with Rooftop Deck.").openPopup();
-
-            var Bracket = L.marker([38.887079, -77.095140], {icon: danceIcon}).addTo(map);
-           
-               Bracket.bindPopup("<b>Bracket Room </b><br> Classy Space with Weekend Djs.").openPopup();
-
-
-
-            var Mister = L.marker([38.885637, -77.093963], {icon: danceIcon}).addTo(map);
-           
-               Mister.bindPopup("<b>Mister Days </b><br>  Weekend Djs with American Fare.").openPopup();
-                
-                             
-          </script>
-       </div>
-      </div>
-    </div>
-  </div>
-
-<footer class="container-fluid">
-  <h3><b>Contact Us!</b></h3>
-  <p><b>Office Hours:</b><p>
-  <p>Mon - Fri. 9AM - 5PM</p>
-  <p>You may call us during office hours, but we would rather text instead, ya know.</p>
-</footer>
-  
-
+   <footer class="container-fluid">
+      <h3><b>Contact Us!</b></h3>
+      <p><b>Office Hours:</b><p>
+      <p>Mon - Fri. 9AM - 5PM</p>
+      <p>You may call us during office hours, but we would rather text instead, ya know.</p>
+   </footer>
 </body>
 </html>
