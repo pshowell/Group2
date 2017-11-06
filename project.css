@@ -1,15 +1,16 @@
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row.content {height: 600px}
-    
+
 /* Set gray background color and 100% height */
 .sidenav {
+  margin-top: -20px;
   background-color: #ffc266;
-  height: 100%;
+  height: 550px;
 
 }
 .btn-lg {
   font-size: 24px;
-  background-color: #555;
+  background-color: rgb(238, 127, 107);
 }
 /*Background image*/
 body{
@@ -17,9 +18,11 @@ body{
 
 }
 
-    
+
+
 /* Set black background color, white text and some padding */
-footer { 
+footer {
+  text-align: center;
   font-family: 'Amatic SC', cursive;
   font-size: 24px;
   background-color: #555;
@@ -27,21 +30,21 @@ footer {
   padding: 15px;
 }
 
-    
-/* On small screens, set height to 'auto' for sidenav and grid */ 
+
+/* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
 .sidenav {
   height: auto;
   padding: 15px;
 }
-.row.content {height: auto;} 
+.row.content {height: auto;}
 }
 #map {
   width: 960px;
   height:500px;
 }
 
-header{ 
+header{
 font-family: 'Caveat Brush', cursive;
 text-align: center;
 
@@ -75,7 +78,9 @@ h3 {
 
 }
 .page-header {
-  font-family: 'Caveat Brush', cursive;
+   margin-top: -20px;
+   background-color: rgb(238, 127, 107);
+   font-family: 'Caveat Brush', cursive;
 	text-align: center;
 }
 /*Contact Form*/

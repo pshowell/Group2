@@ -5,14 +5,16 @@
     <!-- Bootstrap List, Template, Buttons, Header -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- jquery -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+      <!-- Animate.css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
       <!-- Link external CSS -->
       <link rel="stylesheet" type="text/css" href="project.css">
 
-      <!-- Link external JavaScript --> 
+      <!-- Link external JavaScript -->
       <script src="project.js"></script>
 
       <!-- Link Google Font -->
@@ -26,18 +28,16 @@
 <body>
   <div class="container-fluid">
     <div class="row content">
-      <div class="page-header">
+      <header class="animated rubberBand page-header">
         <h1>So...What's The Move?</h1>
 
       <!--   <h1>Follow That Truck!</h1> -->
-      </div>
+      </header>
       <div align= "center" class="col-sm-3 sidenav">
-      <h2>Categories</h2>
+
+      <h2 class="animated slideInLeft">Categories</h2>
       <br>
-      <div class="list-group">
-               <!-- <a href= id ="map" class="list-group-item list-group-item-success">Food</a>
-          <a href=id ="happyHour" class="list-group-item list-group-item-info">Happy Hour</a>
-          <a href=id ="dance" class="list-group-item list-group-item-warning">Dance</a> -->
+      <div class="animated flipInY list-group">
                <button id="food" class="list-group-item list-group-item-success">Food</button>
                <button id="happyHour" class="list-group-item list-group-item-info">Happy Hour</button>
                <button id="dance" class="list-group-item list-group-item-warning">Dance!</button>
@@ -46,7 +46,7 @@
                <a href="contact.html" type="button" class="btn btn-primary btn-lg">I'm A Local!</a>
             </div>
          </div>
-         <div class="col-sm-9">
+         <div class="animated zoomIn col-sm-9">
             <div id="map">
                <script>
                   // Creating the map
@@ -172,7 +172,7 @@
    </div>
 
    <footer class="container-fluid">
-      <h3><b>Contact Us!</b></h3>
+      <h3 style="text-align: center; color: rgb(238, 127, 107);"><b>Contact Us!</b></h3>
       <p><b>Office Hours:</b><p>
       <p>Mon - Fri. 9AM - 5PM</p>
       <p>You may call us during office hours, but we would rather text instead, ya know.</p>
