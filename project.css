@@ -1,3 +1,6 @@
+/** {
+    outline: 1px solid blue;
+}*/
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row.content {height: 600px}
 
@@ -9,12 +12,14 @@
 
 }
 .btn-lg {
+  font-family: 'Eczar', serif;
   font-size: 24px;
   background-color: rgb(238, 127, 107);
 }
 /*Background image*/
-body{
-  background-image: url(https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
+body {
+  background-image:
+  url(https://images.pexels.com/photos/5317/food-salad-restaurant-person.jpg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
 
 }
 
@@ -22,9 +27,9 @@ body{
 
 /* Set black background color, white text and some padding */
 footer {
-  text-align: center;
-  font-family: 'Amatic SC', cursive;
-  font-size: 24px;
+  text-align: left;
+  font-family: 'Eczar', serif;
+  font-size: 20px;
   background-color: #555;
   color: white;
   padding: 15px;
@@ -45,19 +50,21 @@ footer {
 }
 
 header{
-font-family: 'Caveat Brush', cursive;
+font-family: 'Eczar', serif;
 text-align: center;
 
 }
 h1 {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Eczar', serif;
   font-size: 80px;
-  text-align: center;
+  text-align: left;
   color: white;
+  padding-top: 20px;
+  padding-left: 10px;
 }
 h2 {
-  font-family: 'Caveat Brush', cursive;
-  font-size: 48px;
+  font-family: 'Eczar', serif;
+  font-size: 45px;
   text-align: center;
   color: white;
 }
@@ -66,7 +73,7 @@ h3 {
   font-size: 30px;
 }
 .list-group {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: center;
 
